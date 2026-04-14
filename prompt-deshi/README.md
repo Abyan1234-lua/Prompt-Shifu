@@ -25,7 +25,7 @@ This project is for educational purposes: it shows how to create your own Agent 
 - Define expected output format and guardrails.
 
 2. Gather references
-- Collect reliable prompting principles and frameworks.
+- Collect reliable prompting principles and frameworks. (it can be youtube videos, books, and other sources. Basically for RAG)
 - Store and organize them in `references/references.md`.
 - Keep content practical and reusable, not just theoretical.
 

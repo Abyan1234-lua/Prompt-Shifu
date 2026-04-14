@@ -1,69 +1,48 @@
-# Prompt Deshi (Educational Skill)
+This project teaches how to build your own skill with a token-efficient workflow.
 
-This project is for educational purposes: it shows how to create your own Agent skill from scratch, refine it with AI, and connect supporting documents in a clean, reusable structure.
+## Core Idea
 
-## Purpose
+Do not depend on a skill-creator loop for every iteration.  
+Create your skill files manually, then use AI only where it adds value.
 
-`prompt-deshi` demonstrates a practical skill-authoring workflow:
-- define what the skill should do,
-- gather quality reference material,
-- build examples,
-- iterate with AI for clarity,
-- and finalize a structured `SKILL.md` that reliably uses supporting files.
+## Recommended Token-Efficient Workflow
 
-## Project Structure
+1. Build the structure yourself
+- Create your own files and folders first:
+  - `SKILL.md`
+  - `references/references.md` (knowledge base)
+  - `example/examples.md` (structured output patterns)
 
-- `SKILL.md` - main skill instructions and behavior rules.
-- `references/references.md` - foundational prompt engineering concepts and guidance.
-- `example/examples.md` - before/after or pattern-based refinement examples.
+2. Gather raw knowledge
+- Collect unstructured references, notes, and ideas.
+- Organize them inside `references/references.md`.
 
-## Step-by-Step Workflow
+3. Create practical examples
+- Add real input/output transformations in `example/examples.md`.
+- Keep examples reusable and aligned with your target format.
 
-1. Define the skill goal
-- Write one clear sentence for the skill's objective.
-- Decide trigger phrases (for example: "refine this prompt", "optimize this prompt").
-- Define expected output format and guardrails.
+4. Use another LLM for sentence refinement
+- Use ChatGPT, Llama, Qwen, or Gemini to polish wording on your skill, references, and examples.
+- Ask it to turn rough ideas into clear instruction sentences.
+- Keep this model as a writing helper, not the full skill builder.
 
-2. Gather references
-- Collect reliable prompting principles and frameworks. (it can be youtube videos, books, and other sources. Basically for RAG)
-- Store and organize them in `references/references.md`.
-- Keep content practical and reusable, not just theoretical.
+5. Finalize directly in IDE
+- Do minor and final fixes in Cursor or VS Code.
+- Clean structure, remove ambiguity, and ensure consistency.
+- This saves tokens compared to repeated skill-creator iterations.
 
-3. Build examples
-- Add realistic raw prompts and refined outputs in `example/examples.md`.
-- Cover multiple cases (simple, medium, complex).
-- Keep examples consistent with the skill's intended style.
-
-4. Iterate with AI for clarity
-- Ask AI to review wording, ambiguity, and instruction order.
-- Tighten vague statements into explicit rules.
-- Repeat until sections are short, clear, and actionable.
-
-5. Fine-tune `SKILL.md` with AI
-- Ensure `SKILL.md` has proper YAML frontmatter (`name`, `description`).
-- Keep the structure standard: triggers, workflow, output rules, template, guardrails.
-- Verify mandatory behavior is explicit and easy to follow.
-
-6. Connect files correctly
-- Make sure `SKILL.md` points to:
+6. Wire files correctly in `SKILL.md`
+- Reference:
   - `references/references.md`
   - `example/examples.md`
-- Use consistent relative paths so the agent can read the right files.
+- Verify paths and section flow are correct.
 
-7. Validate and polish
-- Remove redundant text and conflicting instructions.
-- Check for model-agnostic wording.
-- Confirm the final flow produces clear, consistent refined prompts.
+## Why This Saves Tokens
 
-## Recommended Iteration Loop
-
-Use this loop each time you improve the skill:
-1. Update references or examples.
-2. Ask AI to evaluate gaps and ambiguity.
-3. Refine `SKILL.md` instructions.
-4. Test with sample raw prompts.
-5. Repeat until output quality is stable.
+- Fewer long back-and-forth generation cycles.
+- More direct edits in the IDE.
+- Better use of your main model budget for skill execution.
 
 ## Outcome
 
-By following this process, you learn how to design a robust, maintainable skill that is easy to extend and produces high-clarity outputs consistently.
+You get a cleaner, maintainable skill with less token waste and better clarity.

@@ -1,6 +1,6 @@
 # Prompt Deshi (Educational Skill)
 
-This project is for educational purposes: it shows how to create your own Cursor skill from scratch, refine it with AI, and connect supporting documents in a clean, reusable structure.
+This project is for educational purposes: it shows how to create your own Agent skill from scratch, refine it with AI, and connect supporting documents in a clean, reusable structure.
 
 ## Purpose
 
